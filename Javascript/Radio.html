@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button,p,input{
+            margin:10px 9px;
+        }
+        body{
+            font-size: 20px;
+        }
+        button{
+            padding: 10px;
+            text-align: center;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+     <h2>Radio button</h2>
+     <input type="radio"  name="gender" onchange="change1()" >Male <br>
+     <input type="radio"  name="gender" onchange="change2()">Female <br>
+     <input type="radio" name="gender" onchange="change3()">Other  <br>
+     <button onclick="getvalue()">Getvalue</button>
+     <p id="para"></p>
+     <script>
+        var val;
+        function change1(){
+            // val=document.getElementById("male").value
+            val="male";
+        }
+
+        function change2(){
+            // val=document.getElementById("female").value
+            val="female";
+
+        }
+        function change3(){
+           //  val=document.getElementById("other").value
+           val="other";
+
+        }
+        
+
+        function getvalue(){
+            
+            document.getElementById("para").innerHTML="Gender: "+val;
+        }
+     </script>
+</body>
+</html>
