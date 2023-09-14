@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #header{
+            background-color: #333;;
+            color:white;
+            text-align: center;
+            padding: 10px;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        table,td{
+            border: 1px solid black;
+        
+        }
+       
+        td{
+            width:500px;
+            padding:10px;
+        }
+      
+     
+    </style>
+</head>
+<body>
+      <div id="header">
+         <h2>Abdullah Khan</h2>
+
+      </div>
+      <div id="body">
+        <div>
+
+          <h2>About Me</h2>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVRqq0aUkVtAb0KYCFNXPfwHrIg_QH0MNGBw&usqp=CAU" alt="">
+          <p>Hello! I'm Abdullah Khan , and I'm passionate about Trainnings.</p>
+        </div>
+  <div>
+    <h2>Education</h2>
+    <ul>
+        <li>2020-bsc loyola</li>
+        <li>2023-MCA oxford</li>
+    </ul>
+  </div>
+
+     <div>
+      <h2>Skills</h2>
+      <table>
+         <tr>
+            <td>Programming languages</td>
+             <td>Javascript, pyhton ,Html/CSS</td>
+         </tr>
+         <tr>
+            <td>Tools</td>
+            <td>Visual Code,git</td>
+         </tr>
+
+         <tr>
+             <td>Languages</td>
+             <td>English,telugu,urdu,Hindi</td>
+         </tr>
+      </table>
+
+     </div>
+
+    <div>
+        <h2>Contact</h2>
+        <p>Email:abdullahkhan@gmail.com</p>
+        <p>Social media: <a href="">Twitter</a></p>
+    </div>
+   
+      </div>
+    
+</body>
+</html>
