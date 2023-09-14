@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    header{
+        background-color:#333;
+        color: white;
+        padding: 20px;
+        
+    }
+
+    li{
+        list-style-type: none;
+        display: inline;
+        position: relative;
+        font-weight: 800;
+        
+    }
+     header a{
+        text-decoration: none;
+        color: white;
+    }
+ header li:first{
+       margin-left:0;         
+  
+ }
+ header li:nth-child(2){
+      margin-left:950px;
+ }
+ header li:nth-child(3){
+    margin-left: 12px;
+ }
+ header li:nth-child(4){
+  margin-left: 15px;
+}
+
+main section{
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 4px;
+            margin:10px 40px;
+            padding: 20px;
+            height: 80px;
+        
+}
+main a {
+    color: blue;
+    font-weight: 800;
+
+     
+}
+div p{
+    display: inline;
+}
+#vote{
+    float:left;
+}
+#ans{
+   
+    justify-content: center;
+  
+}
+#views{
+     float: right;
+}
+
+    
+  </style>
+
+</head>
+<body>
+    <header>
+           <section>
+            <ul>    
+                   <li id="stack">Stack Overflow Clone</li>
+                    <li id="after_stack"><a href="">Home</a></li>
+                    <li><a href="">Questions</a></li>
+                    <li><a href="">Tags</a></li>
+                    <li><a href="">User</a></li>
+
+                </ul>
+             
+           </section>
+    </header>     
+    
+    <main>
+        <section>
+               <a href="">How to create stackoverflow clone ?</a>
+               <div>
+
+                <p id="votes">25 votes</p>
+                <p id="ans"> <center>10 answers</center></p>
+                <p id="views">1000 views</p> 
+            </div>
+            
+        </section>
+    </main>
+    
+
+</body>
+</html>
