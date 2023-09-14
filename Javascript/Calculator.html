@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          .calculation{
+            display: flex;
+            padding: 30px;
+            margin:20px 10px;
+            
+            
+          }
+          body{
+            border: 1px solid black;
+            width: 500px;
+          }
+          #first{
+            margin-left: 20px;
+          }
+          #second{
+            margin-left: 90px;
+          }
+          button,p{
+            padding: 10px 10px;
+            width: 100px;
+            margin-left: 10px;
+          }
+    </style>
+</head>
+<body>
+    <div class="calculation">
+         <div id="first">
+            <label for="num1">Num1</label><br>
+            <input type="text" id="first_num">
+         </div>
+        
+         <div id="second">
+            <label for="num2">Num2</label><br>
+           <input type="text"id="second_num">
+         </div>
+      
+    </div>
+    <button onclick="add()">+</button>
+    <button onclick="subtract()">-</button>
+    <button onclick="div()">/</button>
+    <button onclick="mult()">*</button>
+
+
+    <p id="para"></p>
+  <script src="calculator.js">
+    
+  
+  </script>
+
+    </body>
+</html>
