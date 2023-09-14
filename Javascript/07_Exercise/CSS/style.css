@@ -48,7 +48,7 @@ padding: 12px 8px 12px 50px;
 
 ul li::before{
    content: "";
-    background-image: url(unchecked.png);
+    background-image: url(./Images/unchecked.png);
     border-radius: 50%;
     position: absolute;
     top: 12px;
@@ -67,7 +67,7 @@ ul li.checked{
 }
 
 ul li.checked::before{
-    background-image: url(checked.png);
+    background-image: url(./Images/checked.png);
 }
 
 
