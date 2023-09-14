@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin:40px auto
+        }
+        tr{
+            padding: 10px 20px;
+
+        }
+        th{
+            padding: 5px;
+        }
+        td{
+            padding: 10px 20px;
+        }
+        img{
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+    <table border="2">
+
+    </table>
+    
+
+<script>
+    var table=document.querySelector("table");
+    var request=new XMLHttpRequest()
+    request.open("GET","https://dummyjson.com/products/category/smartphones")
+    request.responseType="json"
+    request.send();
+
+    request.onload=function(){
+        const data=request.response;
+        showTable(data)
+    }
+
+    function showTable(data){
+        var tr=document.createElement("tr");
+    var thead1=document.createElement("th");
+    var thead2=document.createElement("th");
+    var thead3=document.createElement("th");
+    var thead4=document.createElement("th");
+    var thead5=document.createElement("th");
+
+
+
+
+    thead1.textContent="Id";
+    thead2.textContent="Title";
+    thead3.textContent="Price";
+    thead4.textContent="Brand";
+    thead5.textContent="Images";
+
+
+
+    tr.append(thead1);
+    tr.append(thead2);
+    tr.append(thead3);
+    tr.append(thead3);
+    tr.append(thead4);
+    tr.append(thead5);
+
+
+
+    table.append(tr);
+    data=data.products;
+    
+
+    for(let i=0;i<data.length;++i){
+        var tr=document.createElement("tr");
+
+    var td1=document.createElement("td");
+    var td2=document.createElement("td");
+    var td3=document.createElement("td");
+    var td4=document.createElement("td");
+    var td5=document.createElement("td");
+    var img=document.createElement("img")
+    img.src=data[i].images[0];
+
+
+
+
+
+    td1.textContent=data[i].id;
+    td2.textContent=data[i].title;
+    td3.textContent=data[i].price;
+    td4.textContent=data[i].brand;
+    td5.append(img)
+
+
+
+    tr.append(td1);
+    tr.append(td2);
+    tr.append(td3);
+    tr.append(td4);
+    tr.append(td5)
+
+
+    table.append(tr);
+
+         
+    }
+    
+    
+    }
+</script>
+</body>
+</html>
