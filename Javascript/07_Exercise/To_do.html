@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+      <h2>To-Do-App</h2>
+   </header>
+   <main>
+       <div>
+         <input type="text" id="task" placeholder="enter task">
+         <button onclick="addTask()">Add</button>
+       </div>
+       <ul id="list">
+        
+
+
+       </ul>
+   </main>
+   
+   <script>
+           
+var container=document.getElementById("list"); 
+
+container.addEventListener("click",function(e){
+     
+      
+      if(e.target.tagName==='LI'){
+         console.log(e.target)
+         e.target.classList.toggle("checked")
+      }
+      else{
+         e.target.parentElement.remove();
+      }
+},false)
+
+let task=document.getElementById("task");
+
+  function addTask(){
+
+    let value=task.value;
+    if(value === ""){
+      alert("provide some value")
+    }
+   else{
+
+    console.log(value)
+
+    var li=document.createElement("li");
+
+    li.className="checked";
+    
+    li.innerHTML=value;
+    
+    var span=document.createElement("img");
+    
+    span.src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIcAAACHCAMAAAALObo4AAAAYFBMVEX///8AAADS0tLl5eUKCgosLCz4+Pjs7Ozv7+/Kyso7Ozu0tLQYGBg3NzfOzs7y8vITExPExMSVlZVLS0vb29ujo6MjIyOrq6scHBxQUFBYWFiHh4dgYGC7u7syMjJ0dHTKUwO+AAAEw0lEQVR4nM2c6XaqMBSFg6i9VWxxwNvRvv9blqk1IdM+Q9bq/muU3f3lHBKgGGPpoXut2rf9symuuk4c5NhUo86XsiYeTrvN9fAVO8q++tG6LmljdZ0Psw9+3FV3rVflbDzdD3MKfLyvbG2KGTnah/GNuDZ6FULz6B6lW3zcLW0UQvO0PIybiJdGITRH/zC2kZCNElXjpeEa8aHMUk7kMXyU9/njcBr6aCI2fowEmN2liCZqY0JTtykfelUTnBuWkejkmKSFJpl6tb6Yc9qHUtUk0xgDyQyoVKomMTcmHUyT9SFHk4YyqDUf+UCkaHJQel3NZ36QEE0WSjW0kG1uog6SoEFsVI/GXNbIQDYayMbHMLJGjHAbGjA3+gXxdhy72gBjeWjyldJrt51Hr5DRnKqB0rjdtxAQGnrVQHPjvLW+UQQNBOWwdb6zgiYrCQ0EZbfc19XItyhVQ6kUJxFdNBwosxHkm2hDg6aoB2WSYkPjQpkT0UJDa18BIzpVA6VxSF1mgaom19CgufEaT2NMRI4GsnFL2wDRpKpGUim2hA1NVilOIhI00kpxjCC/Fa4aeaXYYi8D6Cf6TCI8NJpQZiOchsY70afFaGjaUOZEqGh02lfACK2habUvX6RlgF77CiSCo9GvFMcI8utD1VD3KVSBDQ2ykTnRZxJB0FxfgEHBJTHBCJRIXqxKsYU1tJyYleIkgqDJSAhlNiK2IYYyCauauBSgTJKhYbevgBFBIvDqCxG/akTtyxcXDeNEnzHCQqNUKbY4aNQqxRYdjWKlOEaINlQrxRatoRWBMomCphCU2QicSIFKsYVWTUEok1bI4qu6FXZhTAeRKVYqvzZALteyzxihNvp5WtIIbqPfYP37EzYKoqHZKIaGaqNPpAQauo0iaP4zbBRAw7NRVS+6aLg2lNHwbaiikdjo0Tz8CRu9EZ1EpDaU0MhtqKCJP21HMiJNRCONQQeZESwNZKkoQgPZ2DxDi+eGnwhkY/hDoX0NGw1mY7zSD205Gx4aDMr82xAaVtVANtrf02kpNJCNxrozVgYN9LifuyQvgQauFFsQmhvFCJRG691JhtAQGhpk4xZY8UFoWjQRLI3gn6VZNZCNl8iTF9CFGp9oQNAtv1sUsta5BkqjSewGsKrJPewEpZHOFaqaDBoMSmZvBF3ebFOJYFM02wCkaKA0GmCyy6pGWCm2JA87YVMU3Dfz0UA2Yu0rYIT5iCD0/MaGsHzAzjXLRLA0SKsYzsNOUBrQacE2gvyogwaDQr60Q32wtgCUORESGugxErxSHCOEqoEwUirFFtbQhmVAjeyS0fYVSARBM9w1egfGIeeUqBHg96tPs93lR8luHSBV82Hqa3aQ9KoSgKYBfFDbV8BIPpA8l9zqC1EWzdmYr0waKldhc2g6Yy7JAbz2FTCSTGREn9pTc9uXr2RDO45DTtHPU/sUqhJofl5sEDMirxTHSMzG/Z/4w1drte98RqrGfs1DKBG1+xW/CqJx3zbhG5GcU6JG/ESWb1ZYosH2KVR5VeO/e8NNhH+iT2uBJvQKENuIVvsKGLHRLKFMuqPRa1++rKoJvxClNzK/U+Bc9CmSy/wf0M0xPuR0WDdfnyVd9Hrev7XVa+dk/g0iID4lzZWx6wAAAABJRU5ErkJggg=="
+    
+    span.onclick="remove()"
+    
+    document.getElementById("list").appendChild(li);
+    li.append(span)
+    task.value=null;
+    
+   }
+
+ }
+
+   </script>
+</body>
+</html>
