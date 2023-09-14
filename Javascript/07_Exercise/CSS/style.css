@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+box-sizing: border-box;
+}
+
+
+header{
+    margin:20px 100px;
+}
+
+main{
+     width: 50%;
+     padding: 10px;
+     background-color: orange;
+     min-height: 300px;
+     margin: 20px 100px;
+     max-height: 100vh;
+   
+
+
+}
+
+input{
+    width:200px ;
+    padding: 10px;
+    margin: 10px 20px;
+    text-align: center;
+    font-weight: 20px;
+}
+
+button{
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+}
+
+ul li{
+list-style: none;
+position: relative;
+padding: 12px 8px 12px 50px;
+
+
+
+}
+
+ul li::before{
+   content: "";
+    background-image: url(unchecked.png);
+    border-radius: 50%;
+    position: absolute;
+    top: 12px;
+    left:8px;
+    height: 28px;
+    width: 28px;
+    background-size: cover;
+    background-position: center;
+
+    
+} 
+
+ul li.checked{
+    
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(checked.png);
+}
+
+
+img{
+    width: 20px;
+    margin-left: 50px;
+}
+
+
+main div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #edeef0;
+    border-radius: 30px;
+    padding: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
