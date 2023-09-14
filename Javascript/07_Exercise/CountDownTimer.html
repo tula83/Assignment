@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CountDownTimer</title>
+        <link rel="stylesheet" href="countdown.css">
+    </head>
+    <body>
+        <header>
+            <h2>Count-Down-Timer</h2>
+        </header>
+        <main>
+            <div>
+                <p>Enter target date</p>
+                <input type="date" placeholder="enter target  date" id="target_date">
+                <button type="" onclick="getDate()">GetDate</button>
+            </div>
+
+            <div id="display"></div=>
+        </main>
+        <script>
+            var dt = document.getElementById("target_date")
+
+            setInterval(function getDate() {
+
+                console.log(dt.value)
+                let value = new Date(dt.value).getTime()
+                let now = new Date().getTime();
+                let distance = value - now;
+                console.log(distance)
+
+                let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                if (!isNaN(distance) && distance > 0) {
+                    console.log(distance)
+                    document.getElementById("display").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+                } 
+                else if (distance < 0) {
+                    alert("Please provide valid date")
+                }
+                
+            }, 1000);
+        </script>
+    </body>
+</html>
