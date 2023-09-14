@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+         nav{
+             text-align: center;
+             margin:50px 0px;
+         }
+     nav  li{
+        list-style-type: none;
+        display: inline;
+     }
+      a{
+        text-decoration: none;
+        color: black;
+      }
+      a{
+        font-weight: 600;
+        margin-left: 8px;
+      }
+
+        nav h2{
+            color: blue;
+            text-shadow: 10px 2px 20px black;
+        }
+
+       nav button{
+            background-color: black;
+            color: white;
+            width: 100px;
+            height: 40px;
+            padding: 10px;
+            border-radius: 4px;
+            position: relative;
+            margin-top: 40px;
+
+        }
+
+         .features{
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 2px;
+            margin-left: 10px;
+            
+
+        }
+      
+         .features section{
+            position: relative;
+             margin:10px 12px;
+            padding: 20px;
+        }
+        .features_section h3{
+            position: relative;
+            margin-top: 15px;
+             
+        }
+        
+      
+
+        .price div{
+            
+             border: 1px solid #ccc;
+             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+             border-radius: 4px;
+             text-align: center;
+             padding: 20px;
+             margin-left: 10px;
+             margin-top: 20px;
+
+        
+        }
+        .price div h2,h4,p{
+            margin-top: 10px;
+        }
+        .price div p{
+            margin-bottom: 10px;
+        }
+
+
+    .contact{
+        margin:10px 8px;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        padding:20px;
+    }
+    .contact button{
+         background-color: green;
+         margin-top: 10px;
+         padding: 4px 8px;
+         border-radius: 2px;
+         color: white;
+         
+    }
+ .contact h2 {
+    margin-left: 10px;
+    margin-bottom: 15px;
+ }
+ .price h2,p{
+     margin-left: 10px;
+     margin-top: 8px;
+ }
+    .features,.price,.contact{
+         display: none;
+    }
+
+    </style>
+</head>
+<body>
+ <header>
+     <nav>
+         <ul>
+            <li><a href="#" onclick="check_features()">Features</a></li>
+            <li><a href="#" onclick="check_price()">Pricing</a></li>
+            <li><a href="#" onclick="check_contact()">Contact</a></li>
+
+         </ul>
+          <h2>Your product name</h2>
+          <p style="color:green">A brief tagline about your product or service</p>
+          <button onclick="get()">GetStarted</button>
+     </nav>
+ </header>
+<main class="features">
+     <section class="features_section">
+
+     <h2>Features</h2>
+
+     <h3>Feature 1</h3>
+      <p>Description of feature1</p>
+      <h3>Feature 2</h3>
+      <p>Description of feature1</p>
+      <h3>Feature 3</h3>
+      <p>Description of feature1</p>
+
+     </section>
+
+
+</main>
+
+<main class="price">
+   <h2>Pricing</h2>
+
+   <div class="basic">
+      <h3>Basic</h3>
+       <p>$19/month</p>
+       <p>Feature1</p>
+       <p>Feature2</p>
+       <p>Limited Support</p>
+
+
+   </div>
+
+   <div class="Premium">
+     <h2>Premium</h2>
+     <h4>$49/month</h4>
+     <p>All features</p>
+     <p>Priority Support</p>
+   </div>
+   
+    <div class="pro">
+         <h2>Pro</h2>
+         <h4>$99/month</h4>
+         <p>All features</p>
+         <p>PremiumSupport</p>
+         <p>Customization Support</p>
+    </div>
+</main>
+
+<main class="contact">
+     <h2>Contact Us</h2>
+     <p>Have question or need more information? Contace us!</p>
+     <button>Email us</button>
+</main>
+
+
+</div>
+<script src="first.js"></script>
+</body>
+</html>
