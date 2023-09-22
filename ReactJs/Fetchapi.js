@@ -14,8 +14,8 @@ async   function  getData(){
     if(!response.ok){
         throw new Error(`HTTP  error ${response.status}`)
     }
-    const data=response.json();
-    setData(data);
+    const data=await response.json();
+    setData(data.prouducts);
     setIsloading(false);
 
 
